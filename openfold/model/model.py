@@ -14,6 +14,9 @@
 # limitations under the License.
 from functools import partial
 import weakref
+import os
+
+os.environ["KMP_DUPLICATE_LIB_OK"] = "True"
 
 import torch
 import torch.nn as nn
@@ -589,3 +592,8 @@ class AlphaFold(nn.Module):
         outputs.update(self.aux_heads(outputs))
 
         return outputs
+
+if __name__ == '__main__':
+
+    model = AlphaFold()
+    print(model)

@@ -1078,6 +1078,8 @@ def chi_angle_atom(atom_index: int) -> np.ndarray:
 chi_atom_1_one_hot = chi_angle_atom(1)
 chi_atom_2_one_hot = chi_angle_atom(2)
 
+
+
 # An array like chi_angles_atoms but using indices rather than names.
 chi_angles_atom_indices = [chi_angles_atoms[restype_1to3[r]] for r in restypes]
 chi_angles_atom_indices = tree.map_structure(
